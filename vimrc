@@ -53,11 +53,16 @@ set modeline
 " --------------------
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let g:showmarks_enable = 1
+" Ignore help, quickfix, non-modifiable buffers
+let showmarks_ignore_type = "hqm"
+" Hilight entire line for lower marks
+let showmarks_hlline_lower = 1
+let showmarks_hlline_upper = 0
 " For marks a-z
-highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
+highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue ctermbg=LightBlue ctermfg=Blue
 " For marks A-Z
-highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
+highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed ctermfg=LightRed ctermbg=DarkRed
 " For all other marks
-highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
+highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow ctermbg=LightYellow ctermfg=DarkYellow
 " For multiple marks on the same line.
-highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
+highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen ctermbg=LightGreen ctermfg=DarkGreen
