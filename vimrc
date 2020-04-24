@@ -12,8 +12,6 @@ highlight LineTooLong cterm=bold ctermbg=red guibg=LightYellow
 autocmd ColorScheme * highlight LineTooLong cterm=bold ctermbg=red guibg=LightYellow
 au BufWinEnter *.py let w:m2=matchadd('LineTooLong', '\%>80v.\+', -1)
 
-au BufNewFile,BufRead *.mustache  setf mustache
-
 " ignore case when searching
 set ic
 
@@ -45,8 +43,8 @@ endif
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
+set autowrite		" Automatically save before commands like :next and :make
 "set smartcase		" Do smart case matching
-"set autowrite		" Automatically save before commands like :next and :make
 
 set modeline
 
