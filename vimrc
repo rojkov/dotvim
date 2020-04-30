@@ -2,6 +2,16 @@ if &t_Co > 1
    syntax enable
 endif
 
+set visualbell
+
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undodir
+
+set background=dark
+colorscheme desert
+
+let g:airline_symbols_ascii = 1
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
