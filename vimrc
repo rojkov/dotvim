@@ -86,9 +86,9 @@ nnoremap <leader>a :cclose<CR>
 " ---------------
 "  VIM-GO
 " ---------------
+let g:go_fmt_command = "goimports"
 "  Don't use location lists for Go
 let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_deadline = "10s"
 let g:go_auto_type_info = 1
