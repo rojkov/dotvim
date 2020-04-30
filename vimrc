@@ -12,6 +12,8 @@ colorscheme desert
 
 let g:airline_symbols_ascii = 1
 
+set foldlevelstart=5
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
@@ -105,9 +107,9 @@ let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 
 let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
+let g:go_highlight_fields = 0
 let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
+let g:go_highlight_function_calls = 0
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
@@ -116,6 +118,7 @@ let g:go_highlight_generate_tags = 1
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go set foldmethod=syntax
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
