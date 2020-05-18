@@ -12,7 +12,12 @@ colorscheme desert
 
 let g:airline_symbols_ascii = 1
 
-set foldlevelstart=5
+set foldlevelstart=11
+" Some big Go files don't fit to the default maxmempattern(1000).
+set maxmempattern=2000
+
+" Disable edges when scrolling
+set scrolloff=0
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -25,7 +30,7 @@ autocmd ColorScheme * highlight LineTooLong cterm=bold ctermbg=red guibg=LightYe
 au BufWinEnter *.py let w:m2=matchadd('LineTooLong', '\%>80v.\+', -1)
 
 " ignore case when searching
-set ic
+" set ic
 
 " highlight search results
 set hls
@@ -124,3 +129,6 @@ autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" Close Preview window after complete.
+autocmd CompleteDone * pclose

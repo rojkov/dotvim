@@ -19,3 +19,6 @@
 [submodule "pack/airblade/start/vim-gitgutter"]
 	path = pack/airblade/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/christoomey/start/vim-tmux-navigator"]
+	path = pack/christoomey/start/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
