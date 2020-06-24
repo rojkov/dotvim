@@ -22,3 +22,6 @@
 [submodule "pack/christoomey/start/vim-tmux-navigator"]
 	path = pack/christoomey/start/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "pack/jgdavey/start/tslime"]
+	path = pack/jgdavey/start/tslime
+	url = https://github.com/jgdavey/tslime.vim.git

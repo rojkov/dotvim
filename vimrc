@@ -132,3 +132,11 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
 " Close Preview window after complete.
 autocmd CompleteDone * pclose
+
+" ---------
+"  tslime
+"  --------
+
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
