@@ -131,10 +131,11 @@ nnoremap <leader>a :cclose<CR>
 let g:go_fmt_command = "goimports"
 "  Don't use location lists for Go
 let g:go_list_type = "quickfix"
-let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave = 0
 let g:go_metalinter_deadline = "10s"
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
+let g:go_diagnostics_enabled = 1
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 0
