@@ -40,6 +40,8 @@ set is
 set ts=4
 set shiftwidth=4
 "set expandtab
+"set preserveindent
+set copyindent
 
 set numberwidth=5
 set number
