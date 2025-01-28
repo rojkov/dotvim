@@ -8,9 +8,13 @@ set undofile " Maintain undo history between sessions
 set undodir=~/.vim/undodir
 
 set background=dark
-colorscheme desert
+" colorscheme desert
+colorscheme solarized
+let g:solarized_termcolors=256
 
-let g:airline_symbols_ascii = 1
+" Don't forget to install the powerline-fonts package.
+let g:airline_symbols_ascii = 0
+let g:airline_powerline_fonts = 1
 
 set foldlevelstart=11
 " Some big Go files don't fit to the default maxmempattern(1000).
