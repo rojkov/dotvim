@@ -25,3 +25,9 @@
 [submodule "pack/jgdavey/start/tslime"]
 	path = pack/jgdavey/start/tslime
 	url = https://github.com/jgdavey/tslime.vim.git
+[submodule "pack/google/start/vim-maktaba"]
+	path = pack/google/start/vim-maktaba
+	url = https://github.com/google/vim-maktaba.git
+[submodule "pack/google/start/vim-codefmt"]
+	path = pack/google/start/vim-codefmt
+	url = https://github.com/google/vim-codefmt.git
