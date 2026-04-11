@@ -190,7 +190,7 @@ let g:tslime_always_current_window = 1
 
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
-  "autocmd FileType c,cpp,proto,javascript,typescript,arduino AutoFormatBuffer clang-format
+  autocmd FileType c,cpp,proto,javascript,typescript,arduino AutoFormatBuffer clang-format
   "autocmd FileType clojure AutoFormatBuffer cljstyle
   "autocmd FileType dart AutoFormatBuffer dartfmt
   "autocmd FileType elixir,eelixir,heex AutoFormatBuffer mixformat
