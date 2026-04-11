@@ -99,6 +99,13 @@ if executable('ccls')
       \ 'initialization_options': {'cache': {'directory': '/home/rojkov/work/ccls-cache' }},
       \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
       \ })
+elseif executable('/home/rojkov/work/carrot/toolchain/clang/bin/clangd')
+   au User lsp_setup call lsp#register_server({
+      \ 'name': 'clangd',
+      \ 'cmd': {server_info->['/home/rojkov/work/carrot/toolchain/clang/bin/clangd']},
+      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+      \ })
 endif
 
 function! s:on_lsp_buffer_enabled() abort
@@ -125,6 +132,8 @@ augroup lsp_install
 augroup END
 
 let g:lsp_highlight_references_enabled = 1
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand('~/vim-lsp.log')
 
 " quickfix key bindings
 map <C-n> :cnext<CR>
